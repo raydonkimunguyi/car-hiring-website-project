@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+  
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+  
+        // Toggle the icon between ☰ and ✖
+        if (navLinks.classList.contains("active")) {
+            hamburger.textContent = "✖"; // Close icon
+        } else {
+            hamburger.textContent = "☰"; // Hamburger icon
+        }
+    });
+  });
+
 function searchCar() {
     let query = document.getElementById("search").value.toLowerCase();
     let cars = document.querySelectorAll(".car-card");
@@ -9,6 +25,19 @@ function searchCar() {
             car.style.display = "none";
         }
     });
+    document.getElementById("cars").scrollIntoView({ behavior: "smooth" });
+}
+
+// Add event listener for Enter key press on the search input
+document.getElementById("search").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form submission (if inside a form)
+        searchCar();
+    }
+});
+
+function scrollToServices() {
+    document.getElementById("services").scrollIntoView({ behavior: "smooth" });
 }
 
 // Simulated Car Data (In a real project, this would come from a database)
@@ -45,29 +74,4 @@ function loadCarDetails() {
     }
 }
 
-// Slideshow Functionality
-let slideIndex = 0;
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
 
-// Manual Slideshow Controls
-function plusSlides(n) {
-    slideIndex += n;
-    if (slideIndex > document.getElementsByClassName("slide").length) { slideIndex = 1; }
-    if (slideIndex < 1) { slideIndex = document.getElementsByClassName("slide").length; }
-    showSlides();
-}
-
-// Run Functions
-window.onload = function () {
-    loadCarDetails();
-    showSlides();
-};
