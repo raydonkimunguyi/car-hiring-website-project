@@ -111,6 +111,10 @@
     .hamburger {
         display: block; /* Show hamburger menu */
     }
+
+    .hero {
+        background-size: contain;
+    }
   }
 
 .hero {
@@ -120,7 +124,8 @@
     color: white;
 }
 .hero {
-    background: url(assets/hero-section-images/header-drone-image.png) no-repeat center center/cover;
+    background: url(assets/hero-section-images/header-drone-image.erased.png) no-repeat center center/cover;
+    
 }
 
 .hero {
