@@ -142,7 +142,7 @@
     justify-self: center;
     max-width: fit-content;
     position: relative;
-    border-radius: 10px;
+    border-radius: 0px;
     background: #014d9e5d; /* Light background for contrast */
     backdrop-filter: blur(2px);
   }
