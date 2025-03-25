@@ -133,9 +133,11 @@
 }
 
 .hero h1 {
-    font-size: 2.0em;
+    font-size: 2.2em;
     margin-top: 60px;
+    color: var(--white-pure);
 }
+
 
 .hero input {
     padding: 10px;
@@ -190,7 +192,7 @@
     
     .services-section {
         margin-top: 6%;
-        margin-bottom: 6%;
+        margin-bottom: 0%;
         background-color: #F9F9F9;
     }
     
@@ -289,6 +291,76 @@
     }
     }
   
+    /*Final CTA Section*/
+.final-cta-section {
+    background: #F9F9F9;
+    padding: 20px
+  }
+  
+  .rental-section {
+    background: #007BFF;
+    color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 50px auto;
+  }
+  .rental-content {
+    max-width: 50%;
+  }
+  .rental-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .rental-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .last-cta-btn {
+    background: #FFC107;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .rental-features {
+    max-width: 45%;
+  }
+  .rental-features ul {
+    list-style: none;
+    padding: 0;
+  }
+  .rental-features ul li {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .rental-features ul li::before {
+    content: '\2713'; /* Checkmark */
+    color: #FFC107;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .rental-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .rental-content {
+      max-width: 100%;
+      text-align: center;
+    }
+    .rental-features {
+      max-width: 100%;
+      text-align: left;
+    }
+  }
 
 
     /* Car Listings Page */
