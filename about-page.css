@@ -498,6 +498,7 @@ button:hover {
 }
 
 .footer-section-container ul li a {
+  list-style: none;
   color: #fff;
   align-self: left;
   margin-right: 10px;
@@ -516,6 +517,7 @@ button:hover {
 
 .footer-section-container ul li {
   margin: 5px 0px;
+  list-style: none;
 }
 
 .footer-section-container .site-pages, .services, .social-media-links, .contact-info {

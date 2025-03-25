@@ -31,3 +31,5 @@ let index = 0;
         }
 
         setInterval(() => moveSlide(1), 5000); // Auto-slide every 5 seconds
+
+        let currentSlide = 0;

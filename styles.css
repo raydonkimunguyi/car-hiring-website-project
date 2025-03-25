@@ -138,6 +138,14 @@
     color: var(--white-pure);
 }
 
+.blurred-box {
+    justify-self: center;
+    max-width: fit-content;
+    position: relative;
+    border-radius: 10px;
+    background: #014d9e5d; /* Light background for contrast */
+    backdrop-filter: blur(2px);
+  }
 
 .hero input {
     padding: 10px;
