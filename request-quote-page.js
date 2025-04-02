@@ -1,3 +1,19 @@
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("nav-links");
+        
+            hamburger.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+        
+                // Toggle the icon between ☰ and ✖
+                if (navLinks.classList.contains("active")) {
+                    hamburger.textContent = "✖"; // Close icon
+                } else {
+                    hamburger.textContent = "☰"; // Hamburger icon
+                }
+            });
+        });
+
         function showPopupMessage(message, isError = false) {
             const popup = document.getElementById('popupMessage');
             popup.textContent = message;
