@@ -1,0 +1,210 @@
+
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+          font-family: open sans;
+          box-sizing: border-box;
+          line-height: 1.6;
+        }
+
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #0A2141;
+          color: white;
+          padding: 15px 20px;
+        }
+        
+        .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }.logo a {
+          text-decoration: none;
+          color: white;
+        }
+      
+        .logo a:hover {
+          text-decoration: none;
+          color: #FFC107;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 15px;
+        }
+        
+        .nav-links li {
+          display: inline;
+        }
+        
+        .nav-links a {
+          text-decoration: none;
+          color: white;
+          font-weight: 600;
+          padding: 8px 5px;
+          transition: 0.3s;
+        }
+        
+        .nav-links a:hover {
+          color: #FFC107;
+          
+        }
+        
+        /* Hamburger Menu Button */
+        .hamburger {
+          display: none; /* Hide by default */
+          font-size: 1.8rem;
+          background: none;
+          border: none;
+          color: white;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+          .nav-links {
+              display: none;
+              flex-direction: column;
+              position: absolute;
+              top: 60px;
+              right: 0;
+              background: #0A2141;
+              width: 100%;
+              text-align: center;
+              padding: 10px 0;
+          }
+        
+          .nav-links.active {
+              display: flex;
+          }
+        
+          .nav-links li {
+              display: block;
+              padding: 10px 0;
+          }
+        
+          .hamburger {
+              display: block; /* Show hamburger menu */
+          }
+
+          .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+          }
+        }
+
+        .contact-section {
+          max-width: 600px;
+          margin: 20px auto;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .form-container {
+            justify-self: center;
+            margin: 30px 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            justify-items: center;
+        }
+        h2 {
+            text-align: center;
+        }
+
+        #call-button {
+          background: #FFC107;
+          color: #000;
+          padding: 12px 20px;
+          border: none;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+  
+      #call-button:hover {
+          background: #003355;
+          color: #FFC107;
+      }
+  
+      .contact-section a #call-button:hover {
+          color: #FFC107;
+          text-decoration: none;
+      }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            justify-self: center;
+        }
+
+        p {
+            text-align: center;
+            justify-self: center;
+        }
+
+        .contact-options {
+            max-width: 90%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-options label {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .btn {
+            width: 50%;
+            background-color: #FFC107;
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            align-self: center;
+        }
+        .btn:hover {
+            background-color: #e0a800;
+        }
+        
+
+        .popup-message {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #4CAF50;
+          color: white;
+          padding: 15px;
+          border-radius: 5px;
+          display: none;
+          min-width: 250px;
+          text-align: center;
+      }
+      .popup-error {
+          background: #f44336;
+      }
