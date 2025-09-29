@@ -1,0 +1,32 @@
+:root {
+        
+  --button-color: #007bff;
+  --button-color-hover:#0056b3;
+  --primary-color-dark:#db6f35;
+  --text-dark:#333333;
+  --text-light:#767268;
+  --white-pure:#ffffff;
+  --white-smoke:#f9f9f9;
+  --max-width:1200px;
+  --header-font:"Bebas Neue", sans-serif;          
+}
+
+/* Global Styles */
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+font-family: open sans;
+box-sizing: border-box;
+line-height: 1.6;
+}
+
+h2 {
+  justify-self: center;
+}

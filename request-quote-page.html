@@ -26,8 +26,8 @@
     <div class="form-container">
       <h2>Request A Quote</h2>
       <p>You can also call us at:</p>
-        <p><a href="tel:+254708927845"><button id="call-button">+254708927845</button></a></p>
-      <form id="quoteForm">
+        <p><a href="tel:+254708927845"><button lkid="call-button">+254708927845</button></a></p>
+      <form id="quoteForm" action="process_quote.php" method="post">
           <input type="text" placeholder="Name*" required>
           <input type="text" placeholder="Destination*" required>
           <select required>
@@ -48,9 +48,9 @@
         </div>
           <button type="submit" class="btn">REQUEST A QUOTE</button>
       </form>
-  </div>
-
-  <div id="popupMessage" class="popup-message"></div>
+    </div>
+    
+    <div id="popupMessage" class="popup-message"></div>    
 
   </section>
 
