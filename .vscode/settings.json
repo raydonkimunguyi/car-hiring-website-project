@@ -1,5 +1,7 @@
 {
   "liveServer.settings.port": 5501,
   "explorer.excludeGitIgnore": false,
-  "git.enabled": false
+  "git.enabled": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.diagnosticsCommitHook.enabled": true
 }
