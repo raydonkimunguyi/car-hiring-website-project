@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
   
-    hamburger.addEventListener("click", function () {
+    hamburger.addEventListener("click", function (e) {
+        e.stopPropagation(); // Prevent click from bubbling up to document
         navLinks.classList.toggle("active");
   
         // Toggle the icon between ☰ and ✖
@@ -12,7 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
             hamburger.textContent = "☰"; // Hamburger icon
         }
     });
-  });
+
+    // Close the nav when clicking outside of it
+    document.addEventListener("click", function (e) {
+        const isClickInsideNav = navLinks.contains(e.target);
+        const isClickOnHamburger = hamburger.contains(e.target);
+
+        if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+            hamburger.textContent = "☰"; // Reset icon
+        }
+    });
+});
 
 function searchCar() {
     let query = document.getElementById("search").value.toLowerCase();
